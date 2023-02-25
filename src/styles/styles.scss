@@ -7,6 +7,10 @@ html, body {
     background-color: var(--bg-color);
 }
 
-.gradient-main {
+.purple-gradient {
     background: linear-gradient(to right, var(--blue), var(--purple), var(--pink));
+}
+
+.aqua-gradient {
+    background: linear-gradient(to right, var(--mint) 40%, var(--skyblue), var(--lightblue));
 }

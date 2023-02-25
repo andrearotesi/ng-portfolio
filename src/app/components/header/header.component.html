@@ -1,0 +1,20 @@
+<div class="purple-gradient mantra-wrapper">
+    <span>✨💫 {{randomMantra}} 💫✨</span>
+</div>
+
+<header class="main-header">
+    <!-- Logo (left side) -->
+    <div>
+        <a [routerLink]="" class="main-header__brand display">
+            ⭐️ Andrea Rotesi
+        </a>
+    </div>
+    <!-- Navigator (right side) -->
+    <nav class="main-nav">
+        <ul class="main-nav__list" *ngFor="let item of navItems">
+            <li class="main-nav__item">
+                <a class="display" [routerLink]="item.route">{{item.name}}</a>
+            </li>
+        </ul>
+    </nav>
+</header>
