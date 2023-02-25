@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  company = {
+    name: 'Lascaux',
+    url: 'https://www.lascaux.it/'
+  };
+
 }
