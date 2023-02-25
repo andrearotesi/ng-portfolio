@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -18,7 +18,8 @@ export class HeaderComponent implements OnInit {
     'It\'s not a feature, it\'s a bug',
     'Have you finished your automated tests yet?',
     'How to center a div?',
-    '!{false} - it\'s funny because it\'s true'
+    '!{false} - it\'s funny because it\'s true',
+    'I � Unicode!',
   ];
 
   navItems = [
