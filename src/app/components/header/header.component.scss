@@ -1,3 +1,10 @@
-.top-message {
+.mantra-wrapper {
+    padding: .25em;
     text-align: center;
+    color: #FFFFFF;
+    font-size: small;
+
+    @media (width < 600px) {
+        font-size: x-small;
+    }
 }
