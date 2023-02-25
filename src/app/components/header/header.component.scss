@@ -1,4 +1,5 @@
 .mantra-wrapper {
+    cursor: default;
     padding: .25em;
     text-align: center;
     color: #FFFFFF;
@@ -15,13 +16,18 @@
     vertical-align: middle;
     padding: 2em 2em;
 
+    @media (width < 600px) {
+        font-size: medium;
+        padding: 1em 1em;
+    }
+
     // Logo (left side)
     div {
         cursor: pointer;
         font-size: x-large;
 
         @media (width < 600px) {
-            font-size: small;
+            font-size: medium;
         }
     }
 
@@ -49,7 +55,7 @@
                 }
 
                 @media (width < 600px) {
-                    font-size: x-small;
+                    font-size: small;
                 }
             }
         }

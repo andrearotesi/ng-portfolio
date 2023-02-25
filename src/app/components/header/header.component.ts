@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   mantras: string[] = [
     'Today is a great day to break production',
     'It\'s not a feature, it\'s a bug',
-    'Have you finished your automated tests?',
+    'Have you finished your automated tests yet?',
     'How to center a div?',
     '!{false} - it\'s funny because it\'s true'
   ];
