@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'ptf-header',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, HttpClientModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  constructor(private http: HttpClient) { }
 
   randomMantra: string = 'You shouldn\'t see this';
 
@@ -26,11 +30,19 @@ export class HeaderComponent implements OnInit {
     {
       name: 'Home',
       route: ''
+    }, 
+    {
+      name: 'Résumé',
+      fileLocation: 'assets/resume/Rotesi-Resume-Dev-ENG.pdf'
     }
   ]
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.randomMantra = this.mantras[Math.floor(Math.random() * this.mantras.length)];
+  }
+
+  openResume(fileLocation: string) {
+    window.open(fileLocation, '_blank');
   }
 
 }
