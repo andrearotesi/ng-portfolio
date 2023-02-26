@@ -1,4 +1,4 @@
-.main-wrapper {
+section {
     display: flex;
     justify-content: center;
     margin-top: 3em;
@@ -8,18 +8,20 @@
         flex-direction: column;
         margin-top: 1em;
     }
+}
 
-    img {
-        padding: 1em 2em;
-        width: 325px;
-        height: auto;
-        object-fit: contain;
+img {
+    padding: 1em 2em;
+    width: 325px;
+    height: auto;
+    object-fit: contain;
 
-        @media (width < 600px) {
-            width: 70%;
-        }
+    @media (width < 600px) {
+        width: 70%;
     }
+}
 
+.main-wrapper {
     ptf-card {
         margin-left: -3.5em;
         margin-top: 4em;
@@ -52,6 +54,20 @@
     }
 }
 
+.bio-wrapper {
+    margin: 3em 0;
 
+    .bio {
+        padding: 0 2em;
+        width: 325px;
+    }
 
+    #snowy-mtn {
+        padding: .5em 1em;
+        width: 450px;
 
+        @media (width < 600px) {
+            width: 80%;
+        }
+    }
+}
