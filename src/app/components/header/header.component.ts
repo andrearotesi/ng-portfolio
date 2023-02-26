@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
     }, 
     {
       name: 'Résumé',
-      fileLocation: 'assets/resume/Rotesi-Resume-Dev-ENG.pdf'
+      fileLocation: 'assets/resume/Andrea-Rotesi-Resume-DEV.pdf'
     }
   ]
 
