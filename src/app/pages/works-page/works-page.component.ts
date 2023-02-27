@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./works-page.component.scss']
 })
 export class WorksPageComponent {
+  
   workList = [
     {
       imageUrl: 'assets/images/angular-cert.png',
