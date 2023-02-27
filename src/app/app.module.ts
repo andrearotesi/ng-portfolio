@@ -7,11 +7,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CardComponent } from "./components/card/card.component";
+import { WorksPageComponent } from './pages/works-page/works-page.component';
+import { WorkItemComponent } from './components/work-item/work-item.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomePageComponent
+        HomePageComponent,
+        WorksPageComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -20,7 +23,8 @@ import { CardComponent } from "./components/card/card.component";
         AppRoutingModule,
         HeaderComponent,
         FooterComponent,
-        CardComponent
+        CardComponent,
+        WorkItemComponent
     ]
 })
 export class AppModule { }

@@ -1,0 +1,23 @@
+<section>
+    <img [src]="item.imageUrl">
+
+    <ptf-card>
+        <ng-container card-header>
+            <p [innerHTML]="item.title"></p>
+        </ng-container>
+        <ng-container card-body>
+            <span [innerHTML]="item.description"></span>
+        </ng-container>
+    </ptf-card>
+</section>
+
+<div class="more-info-wrapper">
+    <div class="more-info" *ngIf="toggleMore">
+        <p [innerHTML]="(item.more | slice:0:75) + '...'"></p>
+        <a (click)="toggleMore = false">Show more</a>
+    </div>
+    <div class="more-info" *ngIf="!toggleMore">
+        <p [innerHTML]="item.more"></p>
+        <a (click)="toggleMore = true">Show less</a>
+    </div>
+</div>
