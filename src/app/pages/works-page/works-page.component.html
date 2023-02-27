@@ -1,1 +1,18 @@
-<p>works works!</p>
+<ng-container *ngFor="let work of workList">
+    <section>
+        <img [src]="work.imageUrl">
+    
+        <ptf-card>
+            <ng-container card-header>
+                <p [innerHTML]="work.title"></p>
+            </ng-container>
+            <ng-container card-body>
+                <span [innerHTML]="work.description"></span>
+            </ng-container>
+        </ptf-card>
+    </section>
+
+    <div class="more-info">
+        <p [innerHTML]="work.more"></p>
+    </div>
+</ng-container>
