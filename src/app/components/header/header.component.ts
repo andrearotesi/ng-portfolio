@@ -63,7 +63,8 @@ export class HeaderComponent implements OnInit {
       this.router.navigate([item.route]);
     }
 
-    if (this.isMobile) {
+    // If I am on mobile and the menu is open, close it
+    if (this.isMobile && this.showMobileMenu) {
       this.toggleMobileMenu(false);
     }
   }
