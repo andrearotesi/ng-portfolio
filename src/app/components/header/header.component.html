@@ -1,21 +1,47 @@
-<div class="purple-gradient mantra-wrapper">
+<div class="purple-gradient mantra-wrapper" *ngIf="!showMobileMenu">
     <span>✨💫 {{randomMantra}} 💫✨</span>
 </div>
 
-<header class="main-header">
+<!-- Mobile only view -->
+<div class="mobile-menu" *ngIf="showMobileMenu">
+    <span (click)="toggleMobileMenu(false)"
+        id="close-icon" class="material-symbols-outlined">
+        close
+    </span>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item" *ngFor="let item of navItems">
+                <a class="display" (click)="openPage(item)">{{item.displayName}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<header class="main-header" *ngIf="!showMobileMenu">
     <!-- Logo (left side) -->
     <div>
         <a [routerLink]="" class="main-header__brand display">
             ⭐️ Andrea Rotesi
         </a>
     </div>
-    <!-- Navigator (right side) -->
-    <nav class="main-nav">
-        <ul class="main-nav__list">
-            <li class="main-nav__item" *ngFor="let item of navItems">
-                <a *ngIf="!item.fileLocation" class="display" [routerLink]="item.route">{{item.name}}</a>
-                <a *ngIf="item.fileLocation" class="display" (click)="openResume(item.fileLocation)">{{item.name}}</a>
-            </li>
-        </ul>
-    </nav>
+
+    <!-- Hamburger icon (Mobile) -->
+    <ng-container *ngIf="isMobile; else desktopHeader">
+        <span *ngIf="!showMobileMenu" 
+            (click)="toggleMobileMenu(true)" 
+            id="hamburger-icon" class="material-symbols-outlined">
+            menu
+        </span>
+    </ng-container>
+
+    <!-- Navigator (Desktop) -->
+    <ng-template #desktopHeader>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item" *ngFor="let item of navItems">
+                    <a class="display" (click)="openPage(item)">{{item.displayName}}</a>
+                </li>
+            </ul>
+        </nav>
+    </ng-template>
 </header>

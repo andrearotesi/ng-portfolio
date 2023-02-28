@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { map } from 'rxjs';
+import { Router, RouterModule } from '@angular/router';
+import { NavItem } from './interfaces/nav-item.interface';
 
 @Component({
   selector: 'ptf-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  @Output() onMobileMenuToggle = new EventEmitter<boolean>;
+
+  isMobile: boolean = window.innerWidth < 600;
+  showMobileMenu = false;
 
   randomMantra: string = 'You shouldn\'t see this';
 
@@ -26,27 +28,50 @@ export class HeaderComponent implements OnInit {
     'I � Unicode!',
   ];
 
-  navItems = [
+  navItems: NavItem[] = [
     {
-      name: 'Home',
+      displayName: 'Home',
       route: ''
     },
     {
-      name: 'Works',
+      displayName: 'Works',
       route: 'works'
     }, 
     {
-      name: 'Résumé',
+      displayName: 'Résumé',
       fileLocation: 'assets/resume/Andrea-Rotesi-Resume-DEV.pdf'
     }
-  ]
+  ];
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.randomMantra = this.mantras[Math.floor(Math.random() * this.mantras.length)];
   }
 
-  openResume(fileLocation: string) {
-    window.open(fileLocation, '_blank');
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isMobile = window.innerWidth < 600;
+  }
+
+  // Navigates to the selected page and closes the mobile menu
+  openPage(item: NavItem) {
+    if (item.fileLocation) {
+      // Item is a file: opening it in a new tab
+      window.open(item.fileLocation, '_blank');
+    } else if (item.route !== undefined) {
+      this.router.navigate([item.route]);
+    }
+
+    if (this.isMobile) {
+      this.toggleMobileMenu(false);
+    }
+  }
+
+  // Toggles mobile menu view, and emits current value
+  toggleMobileMenu(showMenu: boolean) {
+    this.showMobileMenu = showMenu;
+    this.onMobileMenuToggle.emit(this.showMobileMenu);
   }
 
 }

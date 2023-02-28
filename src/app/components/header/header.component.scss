@@ -31,41 +31,67 @@
         }
     }
 
-    // Navigator (right side)
-    .main-nav {
-    
-        .main-nav__list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
+    // Navigator (right side) - Desktop only
+    .main-nav__item {
+        display: inline-block;
+        padding-left: 2em;
+        
+        a {
+            padding: 3px 0;
+        }
+    }
+}
+
+// Hamburger (Mobile menu toggle)
+#hamburger-icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+// Mobile only menu
+.mobile-menu {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--bg-color) 50%, var(--skyblue), var(--mint));
+
+    // Mobile menu closing icon
+    #close-icon {
+        display: block;
+        text-align: end;
+        padding-top: 1.25em;
+        padding-right: .75em;
+        font-size: 20px;
+    }
+
+    // Mobile navigator
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .mobile-nav__list {
+            text-align: center;
         }
     
-        .main-nav__item {
-            display: inline-block;
-            padding-left: 2em;
+        .mobile-nav__item {
+            padding-bottom: 2em;
+        }
+    }
+}
 
-            @media (width < 600px) {
-                padding-left: 1em;
-            }
-            
-            a {
-                text-decoration: none;
-                font-weight: bold;
-                padding: 3px 0;
-                font-size: large;
-    
-                &:hover, :active {
-                    border-bottom: 5px solid;
-                }
+// Common nav styles
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-                @media (width < 600px) {
-                    font-size: small;
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
 
-                    &:hover, :active {
-                        border-bottom: 2px solid;
-                    }
-                }
-            }
+        &:hover, :active {
+            border-bottom: 5px solid;
         }
     }
 }
