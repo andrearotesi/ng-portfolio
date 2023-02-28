@@ -1,1 +1,17 @@
-<p>contact-page works!</p>
+<div class="main-wrapper">
+    <h1 class="display">Let's have a chat!</h1>
+    <div>
+        Want to reach out to me? I'm always available for a friendly chat.
+        <br><br>
+        <span class="display">Not sure what to start with?</span>
+        <br>
+        Here's a list of some things I like to talk about:
+        <ul>
+            <li *ngFor="let interest of interests">
+                {{interest}}
+            </li>
+        </ul>
+        <br>
+        Feel free to contact me on any of the channels listed below!
+    </div>
+</div>

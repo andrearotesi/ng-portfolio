@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ContactPageComponent {
 
+  interests: string[] = [
+    'Tech, programming, frameworks, web development',
+    'Artificial intelligence',
+    'Cars',
+    'Wine',
+    'Skiing, trekking',
+    'Everything else'
+  ];
+
 }

@@ -40,6 +40,10 @@ export class HeaderComponent implements OnInit {
     {
       displayName: 'Résumé',
       fileLocation: 'assets/resume/Andrea-Rotesi-Resume-DEV.pdf'
+    }, 
+    {
+      displayName: 'Contacts',
+      route: 'contacts'
     }
   ];
 
