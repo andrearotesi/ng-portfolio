@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WorkItem } from './interface/work-item.interface';
 
 @Component({
   selector: 'ptf-works',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class WorksPageComponent {
   
-  workList = [
+  workList: WorkItem[] = [
     {
       imageUrl: 'assets/images/angular-cert.png',
       title: 'Angular Expert <br> certification',
