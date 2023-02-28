@@ -2,6 +2,7 @@
     <span>✨💫 {{randomMantra}} 💫✨</span>
 </div>
 
+<!-- Mobile only view -->
 <div class="mobile-menu" *ngIf="showMobileMenu">
     <span (click)="toggleMobileMenu(false)"
         id="close-icon" class="material-symbols-outlined">
@@ -24,7 +25,7 @@
         </a>
     </div>
 
-    <!-- Hamburger (Mobile) -->
+    <!-- Hamburger icon (Mobile) -->
     <ng-container *ngIf="isMobile; else desktopHeader">
         <span *ngIf="!showMobileMenu" 
             (click)="toggleMobileMenu(true)" 
