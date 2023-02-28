@@ -20,7 +20,7 @@
 <header class="main-header" *ngIf="!showMobileMenu">
     <!-- Logo (left side) -->
     <div>
-        <a [routerLink]="" class="main-header__brand display">
+        <a (click)="openPage({route: ''})" class="main-header__brand display">
             ⭐️ Andrea Rotesi
         </a>
     </div>
