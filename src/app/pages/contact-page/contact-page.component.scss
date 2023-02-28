@@ -1,0 +1,15 @@
+.main-wrapper { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .body {
+        margin: 2em 3em 3em 3em;
+    }
+}
+
+.socials-wrapper {
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+}
