@@ -2,13 +2,14 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { NavItem } from './interfaces/nav-item.interface';
+import { SocialLinksComponent } from "../social-links/social-links.component";
 
 @Component({
-  selector: 'ptf-header',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'ptf-header',
+    standalone: true,
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    imports: [CommonModule, RouterModule, SocialLinksComponent]
 })
 export class HeaderComponent implements OnInit {
 

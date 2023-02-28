@@ -14,6 +14,9 @@
                 <a class="display" (click)="openPage(item)">{{item.displayName}}</a>
             </li>
         </ul>
+        <section>
+            <ptf-social-links></ptf-social-links>
+        </section>
     </nav>
 </div>
 
@@ -41,6 +44,9 @@
                 <li class="main-nav__item" *ngFor="let item of navItems">
                     <a class="display" (click)="openPage(item)">{{item.displayName}}</a>
                 </li>
+                <section class="main-nav__socials">
+                    <ptf-social-links></ptf-social-links>
+                </section>
             </ul>
         </nav>
     </ng-template>
