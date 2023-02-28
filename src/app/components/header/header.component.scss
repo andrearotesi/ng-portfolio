@@ -65,16 +65,18 @@
 
     // Mobile navigator
     .mobile-nav {
+        margin-top: 2.5em;
         display: flex;
         align-items: center;
         flex-direction: column;
+        font-size: large;
 
         .mobile-nav__list {
             text-align: center;
         }
     
         .mobile-nav__item {
-            padding-bottom: 2em;
+            padding-bottom: 2.5em;
         }
     }
 }
