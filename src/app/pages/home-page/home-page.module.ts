@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page.component';
+import { CardComponent } from 'src/app/components/card/card.component';
 
 const routes: Routes = [
   { 
@@ -12,10 +13,13 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HomePageComponent
+  ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    CardComponent
   ]
 })
 export class HomePageModule { }
