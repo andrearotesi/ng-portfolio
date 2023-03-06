@@ -5,14 +5,17 @@
     height: fit-content;
     padding: 2em 2.5em;
 
-    @media (width < 600px) {
-        padding: .5em .5em;
-    }
-
     .card__header {
         font-size: 3em;
+    }
+}
 
-        @media (width < 600px) {
+// Mobile
+@media (max-width: 600px) {
+    .card {
+        padding: .5em .5em;
+    
+        .card__header {
             font-size: 1.5em;
         }
     }
