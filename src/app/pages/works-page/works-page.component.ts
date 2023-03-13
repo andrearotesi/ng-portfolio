@@ -29,7 +29,7 @@ export class WorksPageComponent {
     },
     {
       imageUrl: 'assets/images/handbook-preview.png',
-      title: 'English improvement <br> handbook',
+      title: 'English handbook',
       description: `A collection of my best tips.<br>
         <a href="https://www.linkedin.com/posts/andrea-rotesi-0184b5198_how-to-improve-your-english-activity-6998301126357905410-qeOo?utm_source=share&utm_medium=member_desktop">
         Check it out!

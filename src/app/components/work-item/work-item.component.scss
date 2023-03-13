@@ -1,5 +1,5 @@
 img {
-    padding: 1em 2em;
+    padding: 1em 2em 1em 0;
     height: 300px;
     width: auto;
     object-fit: contain;
@@ -43,9 +43,18 @@ section {
     }
 }
 
+// Tablets
+@media (min-width: 600px) and (max-width: 900px) {
+    img {
+        height: auto;
+        width: 40%;
+    }
+}
+
 // Mobile
 @media (max-width: 600px) {
     img {
+        padding: 1em 2em;
         height: auto;
         width: 70%;
     }

@@ -90,6 +90,14 @@ ul {
     }
 }
 
+// Tablets
+@media (min-width: 600px) and (max-width: 900px) {
+    .main-header {
+        font-size: medium;
+        padding: .5em 1em;
+    }
+}
+
 
 // Mobile
 @media (max-width: 600px) {
