@@ -1,3 +1,9 @@
 #list-wrapper {
     margin-bottom: 5em;
 }
+
+@media (min-width: 900px) {
+    .spacer {
+        height: 5em;
+    }
+}
