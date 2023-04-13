@@ -12,7 +12,7 @@ export class SocialLinksComponent {
 
   socials = [
     {
-      link: 'https://www.linkedin.com/in/andrea-rotesi-0184b5198/',
+      link: 'https://www.linkedin.com/in/andrea-rotesi/',
       iconPath: 'assets/icons/linkedin-logo.svg'
     },
     {
