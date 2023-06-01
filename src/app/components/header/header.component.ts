@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
     }, 
     {
       displayName: 'Résumé',
-      fileLocation: 'assets/resume/Rotesi-2023-dev.pdf'
+      fileLocation: 'assets/resume/rotesi-2023-swe.pdf'
     }, 
     {
       displayName: 'Contacts',

@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 export class HomePageComponent {
 
   company = {
-    name: 'Lascaux',
-    url: 'https://www.lascaux.it/'
+    name: 'AODocs',
+    url: 'https://www.aodocs.com/'
   };
 
   aboutMe = {
     whoAmI: {
       title: 'Who am I?',
-      info: `Ciao! I'm Andrea, I'm a Full Stack Engineer with a Front End focus and a vibrant
+      info: `Ciao! I'm Andrea, I'm a Software Engineer with a Front End focus and a vibrant
       passion for tech and design. I crave the satisfaction of solving complex
       problems, so that's why I am so passionate about coding!`
     },
